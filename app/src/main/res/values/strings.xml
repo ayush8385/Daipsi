@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Daipsi</string>
     <string name="powered_by">Powered by Digital हैं</string>
+    <string name="step_outside_your_comfort_zone">Step outside your\n comfort zone.</string>
 </resources>

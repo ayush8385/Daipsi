@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Daipsi">
-        <activity android:name=".GetStartedActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".GetStartedActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
