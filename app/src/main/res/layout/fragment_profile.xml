@@ -8,7 +8,6 @@
     android:padding="20sp"
     tools:context=".Fragment.ProfileFragment">
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -28,14 +27,14 @@
                     android:layout_width="100sp"
                     android:layout_height="100sp"
                     android:src="@drawable/ic_person"
-                    app:tint="@color/white" />
+                    app:tint="@color/profile_text" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Abhishek Kushwaha"
                     android:textColor="@color/profile_text"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -43,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="gmail@gmail.com"
-                    android:textColor="@color/profile_text"
+                    android:textColor="#9C7DA1"
                     android:textSize="12sp" />
 
                 <TextView
@@ -51,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="9876543210"
-                    android:textColor="@color/profile_text"
+                    android:textColor="#9C7DA1"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -63,12 +62,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_marginStart="8sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
                     android:text="Video Preferance"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
+                    android:textColor="@color/profile_textColor"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -81,23 +80,8 @@
                         android:layout_height="wrap_content"
                         android:padding="5sp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/bg_sold_round_light"
-                            android:gravity="center|left"
-                            android:orientation="horizontal"
-                            android:padding="10sp">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:padding="8sp"
-                                android:text="Download Options"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
+
 
                         <ImageView
                             android:layout_width="30sp"
@@ -128,7 +112,7 @@
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
                                 android:text="Video Playback Options"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 
                         <ImageView
@@ -138,9 +122,13 @@
                             android:layout_centerInParent="true"
                             android:src="@drawable/ic_arrow_right"
                             app:tint="@color/course_bg_color" />
+
                     </RelativeLayout>
+
                 </LinearLayout>
+
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -148,12 +136,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_marginStart="8sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
                     android:text="Account Setting"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
+                    android:textColor="@color/profile_textColor"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -181,7 +169,7 @@
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
                                 android:text="Account Security"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 
                         <ImageView
@@ -213,7 +201,7 @@
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
                                 android:text="Learning Reminder"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 
                         <ImageView
@@ -223,9 +211,13 @@
                             android:layout_centerInParent="true"
                             android:src="@drawable/ic_arrow_right"
                             app:tint="@color/course_bg_color" />
+
                     </RelativeLayout>
+
                 </LinearLayout>
+
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -233,12 +225,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_marginStart="8sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
                     android:text="Help and Support"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
+                    android:textColor="@color/profile_textColor"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -266,7 +258,7 @@
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
                                 android:text="About Daipsi"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 
                         <ImageView
@@ -298,7 +290,7 @@
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
                                 android:text="Frequently asked Questions"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 
                         <ImageView
@@ -309,6 +301,7 @@
                             android:src="@drawable/ic_arrow_right"
                             app:tint="@color/course_bg_color" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -329,7 +322,7 @@
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
                                 android:text="Share the Daipsi App"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 
                         <ImageView
@@ -339,21 +332,28 @@
                             android:layout_centerInParent="true"
                             android:src="@drawable/ic_arrow_right"
                             app:tint="@color/course_bg_color" />
+
                     </RelativeLayout>
+
                 </LinearLayout>
+
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10sp"
-                android:gravity="center">
-                <TextView
-                    android:text="Sign out"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+                android:gravity="center"
+                android:padding="10sp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign out" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
