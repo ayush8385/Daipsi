@@ -68,6 +68,7 @@
                         android:layout_height="wrap_content"
                         android:text="NEET"
                         android:textSize="19sp" />
+
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
