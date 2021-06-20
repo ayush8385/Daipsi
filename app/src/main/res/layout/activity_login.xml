@@ -75,6 +75,7 @@
             android:padding="12sp"
             android:paddingStart="30sp"
             android:paddingEnd="30sp"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="end"

@@ -33,7 +33,7 @@
             android:layout_margin="15sp"
             android:textSize="16sp"
             android:textColor="@color/white"
-            android:text="Sign In with E-mail"
+            android:text="Sign up with E-mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <LinearLayout
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/ctm_bg_white_round">
-            <EditText android:id="@+id/login_email"
+            <EditText android:id="@+id/signup_email"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_mail"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/ctm_bg_white_round">
-            <EditText android:id="@+id/login_password"
+            <EditText android:id="@+id/signup_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_mail"
@@ -81,13 +81,14 @@
             android:padding="12sp"
             android:paddingStart="30sp"
             android:paddingEnd="30sp"
+            android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="end"
             android:background="@drawable/ctm_bg_white_round">
             <TextView
                 android:textAllCaps="false"
-                android:text="@string/log_in"
+                android:text="Sign Up"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/textBox"
@@ -135,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="Sign In with Google"
+                android:text="Sign Up with Google"
                 android:textColor="@color/textBox"
                 android:textColorHint="@color/textBox"
                 android:layout_margin="5sp"/>
@@ -158,7 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="Sign In with OTP"
+                android:text="Sign Up with OTP"
                 android:textColor="@color/textBox"
                 android:textColorHint="@color/textBox"
                 android:layout_margin="5sp"/>
