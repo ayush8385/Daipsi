@@ -47,9 +47,10 @@ class createAccountActivity : AppCompatActivity() {
                 try{
                     if(it.equals("success")){
                         Toast.makeText(this,"Registered Successfully", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this,HomeActivity::class.java))
                     }
                     else if(it.equals("Already")){
-                        Toast.makeText(this,"Already Registered", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this,"Already Registered Please Login", Toast.LENGTH_LONG).show()
                     }
                     else{
                         Toast.makeText(this,"Error While Registering", Toast.LENGTH_LONG).show()

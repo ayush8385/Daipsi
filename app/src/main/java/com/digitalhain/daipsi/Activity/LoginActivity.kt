@@ -40,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
                 try{
                     if(it.equals("success")){
                         Toast.makeText(this,"Login Successfully", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this,HomeActivity::class.java))
                     }
                     else{
                         Toast.makeText(this,"Invalid Login Id/Password", Toast.LENGTH_LONG).show()
