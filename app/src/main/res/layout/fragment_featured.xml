@@ -41,6 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:divider="@null"
+                    android:id="@+id/feature_recycler"
                     android:orientation="horizontal"/>
             </LinearLayout>
             <LinearLayout
@@ -53,12 +54,39 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:text="Top Couses for "
+                        android:text="Top Running Courses"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/white"
                         android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:background="@color/course_bg_color"
+                    android:padding="15sp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"
+                        android:id="@+id/course_recycler"
+                        android:orientation="horizontal"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:padding="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
                     <TextView
-                        android:text="JEE"
-                        android:textColor="@color/text_highlight"
+                        android:text="Our popular videos"
+                        android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -74,6 +102,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:divider="@null"
+                        android:id="@+id/videos_recycler"
                         android:orientation="horizontal"/>
                 </LinearLayout>
             </LinearLayout>
@@ -87,13 +116,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:text="Top Couses for "
+                        android:text="Our Partners"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:text="NEET"
-                        android:textColor="@color/text_highlight"
-                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
                 <LinearLayout
@@ -108,108 +133,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:divider="@null"
-                        android:orientation="horizontal"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:padding="12sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:text="Top Couses for "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:text="UPSE"
-                        android:textColor="@color/text_highlight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:gravity="center"
-                    android:background="@color/course_bg_color"
-                    android:padding="15sp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@null"
-                        android:orientation="horizontal"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:padding="12sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:text="Top Couses for "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:text="CA"
-                        android:textColor="@color/text_highlight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:gravity="center"
-                    android:background="#CCADEB"
-                    android:padding="15sp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@null"
-                        android:orientation="horizontal"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:padding="12sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:text="Top Couses for "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:text="CS"
-                        android:textColor="@color/text_highlight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:gravity="center"
-                    android:background="@color/course_bg_color"
-                    android:padding="15sp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@null"
+                        android:id="@+id/partner_recycler"
                         android:orientation="horizontal"/>
                 </LinearLayout>
             </LinearLayout>

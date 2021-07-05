@@ -74,7 +74,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/item_featured_top_reycler" />
+                    tools:listitem="@layout/courses_single_row" />
 
             </LinearLayout>
 

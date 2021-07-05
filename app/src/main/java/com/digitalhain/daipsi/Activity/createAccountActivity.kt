@@ -39,7 +39,7 @@ class createAccountActivity : AppCompatActivity() {
         val etemail=email.text.toString().trim()
         val etpass=password.text.toString().trim()
 
-        val url="https://daipsi.com/api/register.php/"
+        val url="http://daipsi.com/api/register.php/"
         val queue= Volley.newRequestQueue(this)
 
         if(!etemail.equals("") && !etpass.equals("")){
@@ -47,7 +47,7 @@ class createAccountActivity : AppCompatActivity() {
                 try{
                     if(it.equals("success")){
                         Toast.makeText(this,"Registered Successfully", Toast.LENGTH_LONG).show()
-                        startActivity(Intent(this,HomeActivity::class.java))
+                        startActivity(Intent(this,MainActivity::class.java))
                     }
                     else if(it.equals("Already")){
                         Toast.makeText(this,"Already Registered Please Login", Toast.LENGTH_LONG).show()

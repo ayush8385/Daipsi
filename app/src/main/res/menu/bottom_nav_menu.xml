@@ -2,20 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/featured"
-        android:icon="@drawable/ic_star_icon"
+        android:icon="@drawable/ic_baseline_star_outline_24"
         android:title="Featured"/>
     <item
         android:id="@+id/search"
         android:icon="@drawable/ic_search"
         android:title="Search"/>
     <item
-        android:id="@+id/myLearinig"
+        android:id="@+id/mentorship"
         android:icon="@drawable/ic_video"
-        android:title="My Learning"/>
+        android:title="Mentorship"/>
     <item
-        android:id="@+id/liked"
-        android:icon="@drawable/ic_star_icon"
-        android:title="Liked"/>
+        android:id="@+id/consult"
+        android:icon="@drawable/ic_baseline_star_outline_24"
+        android:title="Consultancy"/>
     <item
         android:id="@+id/account"
         android:icon="@drawable/ic_person"

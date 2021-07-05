@@ -8,6 +8,7 @@
     android:padding="20sp"
     tools:context=".Fragment.ProfileFragment">
 
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -32,7 +33,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Abhishek Kushwaha"
+                    android:text="Ayush Mishra"
                     android:textColor="@color/profile_text"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -49,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="9876543210"
+                    android:text="9012345678"
                     android:textColor="#9C7DA1"
                     android:textSize="12sp" />
 
@@ -58,164 +59,35 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10sp"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:text="Video Preferance"
-                    android:textColor="@color/profile_textColor"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
                 <LinearLayout
+                    android:padding="12sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp">
-
-
-
-
-                        <ImageView
-                            android:layout_width="30sp"
-                            android:layout_height="30sp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_arrow_right"
-                            app:tint="@color/course_bg_color" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/bg_sold_round_light"
-                            android:gravity="center|left"
-                            android:orientation="horizontal"
-                            android:padding="10sp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:padding="8sp"
-                                android:text="Video Playback Options"
-                                android:textColor="@color/profile_textColor" />
-                        </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="30sp"
-                            android:layout_height="30sp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_arrow_right"
-                            app:tint="@color/course_bg_color" />
-
-                    </RelativeLayout>
-
+                    android:orientation="horizontal">
+                    <TextView
+                        android:text="My Courses"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/profile_textColor"
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10sp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:text="Account Setting"
-                    android:textColor="@color/profile_textColor"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
                 <LinearLayout
+                    android:gravity="center"
+                    android:background="@color/course_bg_color"
+                    android:padding="15sp"
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content">
 
-                    <RelativeLayout
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="5sp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/bg_sold_round_light"
-                            android:gravity="center|left"
-                            android:orientation="horizontal"
-                            android:padding="10sp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:padding="8sp"
-                                android:text="Account Security"
-                                android:textColor="@color/profile_textColor" />
-                        </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="30sp"
-                            android:layout_height="30sp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_arrow_right"
-                            app:tint="@color/course_bg_color" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/bg_sold_round_light"
-                            android:gravity="center|left"
-                            android:orientation="horizontal"
-                            android:padding="10sp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:padding="8sp"
-                                android:text="Learning Reminder"
-                                android:textColor="@color/profile_textColor" />
-                        </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="30sp"
-                            android:layout_height="30sp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_arrow_right"
-                            app:tint="@color/course_bg_color" />
-
-                    </RelativeLayout>
-
+                        android:divider="@null"
+                        android:id="@+id/course_recycler"
+                        android:orientation="horizontal"/>
                 </LinearLayout>
-
             </LinearLayout>
 
             <LinearLayout

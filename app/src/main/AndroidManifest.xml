@@ -13,7 +13,6 @@
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Daipsi">
-        <activity android:name=".Activity.HomeActivity"></activity>
         <activity android:name=".Activity.createAccountActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.GetStartedActivity" />
@@ -24,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.MainActivity"/>
     </application>
 
 </manifest>
