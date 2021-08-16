@@ -39,7 +39,7 @@ class createAccountActivity : AppCompatActivity() {
         val etemail=email.text.toString().trim()
         val etpass=password.text.toString().trim()
 
-        val url="http://daipsi.com/api/register.php/"
+        val url="http://daipsi.com/Android_App_Daipsi/register.php/"
         val queue= Volley.newRequestQueue(this)
 
         if(!etemail.equals("") && !etpass.equals("")){

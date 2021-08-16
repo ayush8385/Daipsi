@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Activity.LoginActivity"
     android:padding="10sp"
-    android:background="@color/bg">
+    android:background="@color/white">
    <LinearLayout
        android:id="@+id/toolBar"
        android:layout_width="match_parent"
@@ -14,7 +14,7 @@
        android:orientation="horizontal"
        android:gravity="center">
        <TextView
-           android:textColor="@color/white"
+           android:textColor="@color/black"
            android:textSize="20sp"
            android:text="@string/sign_in"
            android:layout_width="wrap_content"
@@ -43,8 +43,9 @@
                 android:drawableLeft="@drawable/ic_mail"
                 android:textSize="16sp"
                 android:hint="E-mail"
+                android:drawablePadding="10dp"
                 android:textColor="@color/textBox"
-                android:textColorHint="@color/textBox"
+                android:textColorHint="@color/profile_text"
                 android:layout_margin="5sp"
                 android:inputType="textWebEmailAddress"/>
         </LinearLayout>
@@ -63,7 +64,8 @@
                 android:textSize="16sp"
                 android:hint="Password"
                 android:textColor="@color/textBox"
-                android:textColorHint="@color/textBox"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/profile_text"
                 android:layout_margin="5sp"
                 android:inputType="textPassword"/>
         </LinearLayout>
@@ -85,7 +87,7 @@
                 android:text="@string/log_in"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@color/textBox"
+                android:textColor="@color/profile_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -103,7 +105,7 @@
             <TextView
                 android:padding="10sp"
                 android:text="or"
-                android:textColor="@color/textBox"
+                android:textColor="@color/profile_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <View
@@ -131,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="Sign In with Google"
-                android:textColor="@color/textBox"
+                android:textColor="@color/profile_text"
                 android:textColorHint="@color/textBox"
                 android:layout_margin="5sp"/>
         </LinearLayout>
@@ -154,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:text="Sign In with OTP"
-                android:textColor="@color/textBox"
+                android:textColor="@color/profile_text"
                 android:textColorHint="@color/textBox"
                 android:layout_margin="5sp"/>
         </LinearLayout>

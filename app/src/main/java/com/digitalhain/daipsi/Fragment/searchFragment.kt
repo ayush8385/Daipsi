@@ -69,7 +69,7 @@ class searchFragment : Fragment() {
         else{
             str="govtexams"
         }
-        url="http://daipsi.com/api/"+str+".php/"
+        url="http://daipsi.com/Android_App_Daipsi/"+str+".php/"
         val queue= Volley.newRequestQueue(context)
 
         recyclerView=view.findViewById(R.id.recyclermain)

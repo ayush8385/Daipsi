@@ -129,7 +129,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
-                                android:text="About Daipsi"
+                                android:text="Contact Us"
                                 android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 
@@ -161,7 +161,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:padding="8sp"
-                                android:text="Frequently asked Questions"
+                                android:text="About Daipsi"
                                 android:textColor="@color/profile_textColor" />
                         </LinearLayout>
 

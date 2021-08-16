@@ -5,11 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingHorizontal="14sp">
-    <ImageView
-        android:src="@color/white"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:id="@+id/image"
-        android:scaleType="centerCrop"
-        android:layout_height="150sp"/>
+        android:layout_height="150sp"
+        app:cardCornerRadius="12dp">
+        <ImageView
+            android:src="@color/white"
+            android:layout_width="match_parent"
+            android:id="@+id/image"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

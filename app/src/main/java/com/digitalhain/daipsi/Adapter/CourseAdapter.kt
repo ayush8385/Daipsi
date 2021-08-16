@@ -1,12 +1,15 @@
 package com.digitalhain.daipsi.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.digitalhain.daipsi.Activity.CourseDetail
 import com.digitalhain.daipsi.R
 import com.digitalhain.daipsi.model.Items
 import com.squareup.picasso.Picasso
@@ -17,6 +20,7 @@ class CourseAdapter(val context: Context, val items: ArrayList<Items>):RecyclerV
         var name:TextView=view.findViewById(R.id.name)
         var course:TextView=view.findViewById(R.id.course_name)
         var image: ImageView =view.findViewById(R.id.image)
+        var course_detail:LinearLayout=view.findViewById(R.id.course)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
@@ -30,6 +34,10 @@ class CourseAdapter(val context: Context, val items: ArrayList<Items>):RecyclerV
         holder.name.text=item.name
         holder.course.text=item.course
         Picasso.get().load(item.image).into(holder.image)
+
+        holder.course_detail.setOnClickListener {
+            context.startActivity(Intent(context,CourseDetail::class.java))
+        }
     }
 
     override fun getItemCount(): Int {

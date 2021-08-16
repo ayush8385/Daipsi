@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
         val etemail=email.text.toString().trim()
         val etpass=password.text.toString().trim()
 
-        val url="http://daipsi.com/api/login.php/"
+        val url="http://daipsi.com/Android_App_Daipsi/login.php/"
         val queue= Volley.newRequestQueue(this)
 
         if(!etemail.equals("") && !etpass.equals("")){
