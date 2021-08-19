@@ -15,17 +15,17 @@
         android:theme="@style/Theme.Daipsi"
         android:usesCleartextTraffic="true">
         <activity android:name=".Activity.CourseDetail">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activity.createAccountActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.GetStartedActivity" />
         <activity android:name=".Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Activity.MainActivity">
 
