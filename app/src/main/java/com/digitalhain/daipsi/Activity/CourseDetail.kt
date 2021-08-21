@@ -77,9 +77,8 @@ class CourseDetail : AppCompatActivity() {
                     player.play()
                 }
                 else{
-                    player.cueVideo("0zx_eFyHRU0")
+                    player.loadVideo("0zx_eFyHRU0")
                     player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT)
-
                 }
             }
 
@@ -87,7 +86,7 @@ class CourseDetail : AppCompatActivity() {
                 p0: YouTubePlayer.Provider?,
                 p1: YouTubeInitializationResult?
             ) {
-                TODO("Not yet implemented")
+
             }
 
         })
