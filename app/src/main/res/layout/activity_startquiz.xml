@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8869b5"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:id="@+id/topic_name"
+        android:layout_centerHorizontal="true"
+        android:text="Android Stuido Quiz"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:id="@+id/allcorrect"
+        android:layout_centerHorizontal="true"
+        android:text="All Answers are Correct"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Topic"
+        android:textSize="18sp"
+        android:id="@+id/nxt_btn"
+        android:visibility="gone"
+        android:layout_marginHorizontal="14dp"
+        android:paddingHorizontal="24dp"
+        android:layout_below="@id/allcorrect"
+        android:paddingVertical="18dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:background="@color/profile_textColor"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_above="@+id/submit"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/topic_name"
+        android:id="@+id/questionrecycler"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="18sp"
+        android:id="@+id/submit"
+        android:paddingVertical="18dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:background="@color/profile_textColor"/>
+
+
+
+</RelativeLayout>

@@ -34,6 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ayush Mishra"
+                    android:id="@+id/user_name"
                     android:textColor="@color/profile_text"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -42,6 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:id="@+id/user_mail"
                     android:text="gmail@gmail.com"
                     android:textColor="#9C7DA1"
                     android:textSize="12sp" />
@@ -51,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="9012345678"
+                    android:id="@+id/user_num"
                     android:textColor="#9C7DA1"
                     android:textSize="12sp" />
 

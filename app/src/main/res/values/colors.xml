@@ -14,4 +14,6 @@
     <color name="course_bg_color">#CCADEB</color>
     <color name="profile_text">#5E3F63</color>
     <color name="profile_textColor">#97789C</color>
+    <color name="list_background" />
+    <color name="list_divider">#FDCC0D</color>
 </resources>

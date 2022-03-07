@@ -29,10 +29,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun logIn() {
+
         val etemail=email.text.toString().trim()
         val etpass=password.text.toString().trim()
 
-        val url="http://daipsi.com/Android_App_Daipsi/login.php/"
+        val url="https://daipsi.com/Android_Daipsi/LoginAuth/login.php/"
         val queue= Volley.newRequestQueue(this)
 
         if(!etemail.equals("") && !etpass.equals("")){
@@ -41,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
                     if(it.equals("success")){
                         Toast.makeText(this,"Login Successfully", Toast.LENGTH_LONG).show()
                         startActivity(Intent(this,MainActivity::class.java))
+                        finishAffinity()
                     }
                     else{
                         Toast.makeText(this,"Invalid Login Id/Password", Toast.LENGTH_LONG).show()

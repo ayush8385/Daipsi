@@ -15,14 +15,15 @@
        android:gravity="center">
        <TextView
            android:textColor="@color/black"
-           android:textSize="20sp"
+           android:textSize="24sp"
            android:text="@string/sign_in"
+           android:textStyle="bold"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"/>
    </LinearLayout>
     <LinearLayout
         android:id="@+id/below_toolbar_layout"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="150sp"
         android:layout_below="@id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,7 +73,7 @@
         <LinearLayout
             android:layout_marginStart="15sp"
             android:layout_marginEnd="15sp"
-            android:layout_gravity="end"
+            android:layout_gravity="center"
             android:layout_marginTop="10sp"
             android:padding="12sp"
             android:paddingStart="30sp"
@@ -91,75 +92,75 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <View
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="1sp"
-                android:background="@color/textBox"/>
-            <TextView
-                android:padding="10sp"
-                android:text="or"
-                android:textColor="@color/profile_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <View
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="1sp"
-                android:background="@color/textBox"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginStart="20sp"
-            android:layout_marginEnd="20sp"
-            android:layout_marginTop="10sp"
-            android:padding="8sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ctm_bg_white_round">
-            <ImageView
-                android:src="@drawable/ic_google"
-                android:layout_width="24sp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="8sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Sign In with Google"
-                android:textColor="@color/profile_text"
-                android:textColorHint="@color/textBox"
-                android:layout_margin="5sp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginStart="20sp"
-            android:layout_marginEnd="20sp"
-            android:layout_marginTop="10sp"
-            android:padding="8sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ctm_bg_white_round">
-            <ImageView
-                android:src="@drawable/ic_phone"
-                android:layout_width="24sp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="8sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Sign In with OTP"
-                android:textColor="@color/profile_text"
-                android:textColorHint="@color/textBox"
-                android:layout_margin="5sp"/>
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_marginTop="10sp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center">-->
+<!--            <View-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1sp"-->
+<!--                android:background="@color/textBox"/>-->
+<!--            <TextView-->
+<!--                android:padding="10sp"-->
+<!--                android:text="or"-->
+<!--                android:textColor="@color/profile_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <View-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1sp"-->
+<!--                android:background="@color/textBox"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_marginStart="20sp"-->
+<!--            android:layout_marginEnd="20sp"-->
+<!--            android:layout_marginTop="10sp"-->
+<!--            android:padding="8sp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/ctm_bg_white_round">-->
+<!--            <ImageView-->
+<!--                android:src="@drawable/ic_google"-->
+<!--                android:layout_width="24sp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginEnd="8sp"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="16sp"-->
+<!--                android:text="Sign In with Google"-->
+<!--                android:textColor="@color/profile_text"-->
+<!--                android:textColorHint="@color/textBox"-->
+<!--                android:layout_margin="5sp"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_marginStart="20sp"-->
+<!--            android:layout_marginEnd="20sp"-->
+<!--            android:layout_marginTop="10sp"-->
+<!--            android:padding="8sp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/ctm_bg_white_round">-->
+<!--            <ImageView-->
+<!--                android:src="@drawable/ic_phone"-->
+<!--                android:layout_width="24sp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginEnd="8sp"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="16sp"-->
+<!--                android:text="Sign In with OTP"-->
+<!--                android:textColor="@color/profile_text"-->
+<!--                android:textColorHint="@color/textBox"-->
+<!--                android:layout_margin="5sp"/>-->
+<!--        </LinearLayout>-->
     </LinearLayout>
     <LinearLayout
         android:layout_alignParentBottom="true"

@@ -33,6 +33,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:id="@+id/course_name"
                     android:text="Course Name"
                     android:textColor="@color/profile_text"
                     android:textSize="18sp"
@@ -60,6 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5sp"
+                    android:id="@+id/course_name_with"
                     android:text="NEET for absolute beginner"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -68,6 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5sp"
+                    android:id="@+id/course_by"
                     android:text="Officially created by the Professor Raj Malhotra"
                     android:textSize="16sp" />
 
@@ -83,6 +86,8 @@
                         android:layout_height="20sp"
                         android:src="@drawable/ic_star_fill_full"
                         app:tint="@color/star_tint" />
+
+
 
                     <ImageView
                         android:layout_width="20sp"
@@ -109,24 +114,40 @@
                         app:tint="@color/star_tint" />
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text="Created by Dr. Raj Malhotra" />
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5sp"-->
+<!--                    android:text="Created by Dr. Raj Malhotra" />-->
+
+
+
 
 
                 <RelativeLayout
                     android:id="@+id/box"
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="200dp">
 
-                    <fragment
-                        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
-                        android:id="@+id/youtubesupportfragment"
+
+<!--                    <fragment-->
+<!--                        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"-->
+<!--                        android:id="@+id/youtubesupportfragment"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+<!--                    <org.videolan.libvlc.util.VLCVideoLayout-->
+<!--                        android:id="@+id/videoLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:fitsSystemWindows="false" />-->
+                    <VideoView
+                        android:id="@+id/videolayout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:fitsSystemWindows="false"/>
+
 
 <!--                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView-->
 <!--                        android:id="@+id/youtube_player_view"-->
@@ -165,14 +186,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$"
+                        android:text="150 INR"
+                        android:id="@+id/price"
                         android:textSize="16sp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:text="150" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -193,24 +210,10 @@
                         android:layout_height="wrap_content"
                         android:paddingStart="8sp"
                         android:paddingTop="5sp"
+                        android:id="@+id/count"
                         android:text="⦿ 10 Video "
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="8sp"
-                        android:paddingTop="5sp"
-                        android:text="⦿ Support Files"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="8sp"
-                        android:paddingTop="5sp"
-                        android:text="⦿ 110 Article"
-                        android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -299,33 +302,12 @@
                             android:layout_height="wrap_content"
                             android:paddingStart="8sp"
                             android:paddingTop="5sp"
+                            android:id="@+id/description"
                             android:text="@string/lorem_poem"
                             android:textSize="16sp" />
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingStart="8sp"
-                            android:paddingTop="5sp"
-                            android:text="⦿"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingStart="8sp"
-                            android:paddingTop="5sp"
-                            android:text="@string/lorem_poem"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -347,61 +329,59 @@
                         android:layout_height="wrap_content"
                         android:paddingStart="8sp"
                         android:paddingTop="5sp"
+                        android:id="@+id/reqs"
                         android:text="⦿ Reason one"
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="8sp"
-                        android:paddingTop="5sp"
-                        android:text="⦿ Reason two"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="8sp"
-                        android:paddingTop="5sp"
-                        android:text="⦿ Reason three"
-                        android:textSize="16sp" />
-
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10sp"-->
+<!--                    android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Curriculum"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Curriculum"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Subjuect List in recycler view" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Subjuect List in recycler view" />-->
+<!--                </LinearLayout>-->
 
             </LinearLayout>
 
         </RelativeLayout>
 
+
+
     </androidx.core.widget.NestedScrollView>
-    <androidx.appcompat.widget.AppCompatButton
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buy Now"
-        android:textSize="17sp"
-        android:textColor="@color/white"
-        android:paddingVertical="18dp"
-        android:id="@+id/buy_btn"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/profile_textColor"/>
+        android:id="@+id/buy_btn"
+        android:background="@color/profile_textColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17sp"
+            android:id="@+id/buy_txt"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:paddingVertical="18dp" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
 
 </RelativeLayout>

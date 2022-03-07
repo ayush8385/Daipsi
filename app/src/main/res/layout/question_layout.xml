@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="10dp"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingTop="20dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:id="@+id/question"
+                    android:text="Q 1 - What is Pending Intent in android?"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_grp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/option_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#b799d7"
+                        android:text="-It is a kind of an intent"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/option_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#b799d7"
+                        android:text="- It is used to pass the data between activities"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/option_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#b799d7"
+                        android:text="- It will fire at a future point of time."
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/option_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#b799d7"
+                        android:text="- None of the Above"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Correct"
+                    android:textSize="19sp"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:paddingVertical="10dp"
+                    android:layout_below="@+id/radio_grp"
+                    android:id="@+id/correct"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

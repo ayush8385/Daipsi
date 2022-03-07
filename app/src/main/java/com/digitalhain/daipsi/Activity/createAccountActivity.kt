@@ -1,6 +1,8 @@
 package com.digitalhain.daipsi.Activity
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -20,6 +22,10 @@ class createAccountActivity : AppCompatActivity() {
     lateinit var email:EditText
     lateinit var password:EditText
     lateinit var signup:LinearLayout
+    lateinit var name:EditText
+    lateinit var qualif:EditText
+    lateinit var number:EditText
+    lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
@@ -27,6 +33,11 @@ class createAccountActivity : AppCompatActivity() {
         email=findViewById(R.id.signup_email)
         password=findViewById(R.id.signup_password)
         signup=findViewById(R.id.signup)
+        name=findViewById(R.id.signup_name)
+        qualif=findViewById(R.id.signup_qual)
+        number=findViewById(R.id.signup_number)
+
+        sharedPreferences=getSharedPreferences("Shared Preference", Context.MODE_PRIVATE)
 
         signup.setOnClickListener {
             signUp()
@@ -39,15 +50,26 @@ class createAccountActivity : AppCompatActivity() {
         val etemail=email.text.toString().trim()
         val etpass=password.text.toString().trim()
 
-        val url="http://daipsi.com/Android_App_Daipsi/register.php/"
+        val url="https://daipsi.com/Android_Daipsi/LoginAuth/register.php/"
         val queue= Volley.newRequestQueue(this)
+
+        if(etpass.length <=4){
+            Toast.makeText(applicationContext,"Password is too short",Toast.LENGTH_SHORT).show()
+            return
+        }
 
         if(!etemail.equals("") && !etpass.equals("")){
             val stringRequest=object : StringRequest(Method.POST,url, Response.Listener {
                 try{
                     if(it.equals("success")){
                         Toast.makeText(this,"Registered Successfully", Toast.LENGTH_LONG).show()
+                        sharedPreferences.edit().putString("name",name.text.toString()).apply()
+                        sharedPreferences.edit().putString("email",etemail).apply()
+                        sharedPreferences.edit().putString("number",number.text.toString()).apply()
+                        sharedPreferences.edit().putString("password",etpass).apply()
+                        sharedPreferences.edit().putBoolean("isLoggedIn",true).apply()
                         startActivity(Intent(this,MainActivity::class.java))
+                        finishAffinity()
                     }
                     else if(it.equals("Already")){
                         Toast.makeText(this,"Already Registered Please Login", Toast.LENGTH_LONG).show()
@@ -64,8 +86,11 @@ class createAccountActivity : AppCompatActivity() {
             }){
                 override fun getParams(): MutableMap<String, String> {
                     val params=HashMap<String,String>()
+                    params.put("name",name.text.toString())
                     params.put("email",etemail)
                     params.put("password",etpass)
+                    params.put("number",number.text.toString())
+                    params.put("qualification",qualif.text.toString())
                     return params
                 }
             }

@@ -13,7 +13,7 @@
             android:src="@color/white"
             android:layout_width="match_parent"
             android:id="@+id/image"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:layout_height="match_parent"/>
     </androidx.cardview.widget.CardView>
 

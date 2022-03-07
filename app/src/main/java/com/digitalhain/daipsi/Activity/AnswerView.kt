@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toolbar
 import com.digitalhain.daipsi.R
 
 class AnswerView : AppCompatActivity() {
@@ -18,6 +19,7 @@ class AnswerView : AppCompatActivity() {
 
         question.text = intent.getStringExtra("Ques")
         answer.text = intent.getStringExtra("Ans")
+        supportActionBar?.title=intent.getStringExtra("course")
 
     }
 

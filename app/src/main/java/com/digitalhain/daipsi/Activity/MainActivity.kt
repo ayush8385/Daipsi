@@ -1,8 +1,10 @@
 package com.digitalhain.daipsi.Activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.digitalhain.daipsi.Fragment.*
@@ -35,12 +37,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.search ->{
                     selectSub()
-                    val bundle = Bundle()
-                    bundle.putString("subject",sub)
-                    val fragment=searchFragment()
-                    fragment.arguments=bundle
-                    supportFragmentManager.beginTransaction().replace(R.id.main_frameLayout,
-                        fragment).commit()
                 }
                 R.id.mentorship ->{
                     supportFragmentManager.beginTransaction().replace(R.id.main_frameLayout,
@@ -59,18 +55,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun selectSub() {
+    private fun selectSub():String {
+        var subj:String?=""
         lateinit var dialog:AlertDialog
         val array = arrayOf("Medical","Engineering","Commerce","Government Exam")
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Select Subject to Continue")
         builder.setSingleChoiceItems(array,-1,{_,which->
-            sub = array[which]
             dialog.dismiss()
+
+            val bundle=Bundle()
+            bundle.putString("subject",array[which])
+            val fragm = SearchFrag();
+            fragm.arguments=bundle
+            supportFragmentManager.beginTransaction().replace(R.id.main_frameLayout,
+                fragm).commit()
+
 
         })
         dialog = builder.create()
         dialog.show()
+
+        return subj!!
     }
 
     override fun onBackPressed() {

@@ -12,13 +12,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.digitalhain.daipsi.Activity.CourseDetail
 import com.digitalhain.daipsi.R
 import com.digitalhain.daipsi.model.Items
+import com.digitalhain.daipsi.model.TopCourses
 import com.squareup.picasso.Picasso
+import org.w3c.dom.Text
 import java.util.*
 
-class CourseAdapter(val context: Context, val items: ArrayList<Items>):RecyclerView.Adapter<CourseAdapter.HomeViewHolder>() {
+class CourseAdapter(val context: Context, val items: ArrayList<TopCourses>):RecyclerView.Adapter<CourseAdapter.HomeViewHolder>() {
     class HomeViewHolder(val view: View):RecyclerView.ViewHolder(view){
-        var name:TextView=view.findViewById(R.id.name)
-        var course:TextView=view.findViewById(R.id.course_name)
+        var by:TextView=view.findViewById(R.id.course_by)
+        var name:TextView=view.findViewById(R.id.course_name)
         var image: ImageView =view.findViewById(R.id.image)
         var course_detail:LinearLayout=view.findViewById(R.id.course)
     }
@@ -32,11 +34,13 @@ class CourseAdapter(val context: Context, val items: ArrayList<Items>):RecyclerV
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         var item=items[position]
         holder.name.text=item.name
-        holder.course.text=item.course
-        Picasso.get().load(item.image).into(holder.image)
+        holder.by.text=item.by
+        Picasso.get().load("https://daipsi.com/Android_Daipsi/TopCourses/images/"+item.image).into(holder.image)
 
         holder.course_detail.setOnClickListener {
-            context.startActivity(Intent(context,CourseDetail::class.java))
+            val intent = Intent(context,CourseDetail::class.java)
+            intent.putExtra("c_det",item)
+            context.startActivity(intent)
         }
     }
 

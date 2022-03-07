@@ -12,7 +12,7 @@ import com.digitalhain.daipsi.model.Items
 import com.squareup.picasso.Picasso
 import java.util.*
 
-class FeatureAdapter(val context: Context, val items: ArrayList<Items>):RecyclerView.Adapter<FeatureAdapter.HomeViewHolder>() {
+class FeatureAdapter(val context: Context, val items: ArrayList<String>):RecyclerView.Adapter<FeatureAdapter.HomeViewHolder>() {
     class HomeViewHolder(val view: View):RecyclerView.ViewHolder(view){
         var image: ImageView =view.findViewById(R.id.image)
     }
@@ -24,8 +24,8 @@ class FeatureAdapter(val context: Context, val items: ArrayList<Items>):Recycler
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        var item=items[position]
-        Picasso.get().load(item.image).into(holder.image)
+
+        Picasso.get().load(items[position]).into(holder.image)
     }
 
     override fun getItemCount(): Int {

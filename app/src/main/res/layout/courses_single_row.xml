@@ -6,8 +6,9 @@
     android:id="@+id/course"
     android:layout_height="wrap_content"
     android:padding="10sp">
+
     <androidx.cardview.widget.CardView
-        android:layout_width="160sp"
+        android:layout_width="150sp"
         android:layout_height="100sp"
         app:cardCornerRadius="12dp"
         app:cardBackgroundColor="#0000">
@@ -18,7 +19,10 @@
             android:scaleType="centerCrop"
             android:layout_height="match_parent"/>
     </androidx.cardview.widget.CardView>
+
     <TextView
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
         android:layout_marginTop="5sp"
         android:layout_marginBottom="5sp"
         android:textSize="16sp"
@@ -29,43 +33,78 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:layout_marginTop="5sp"
+        android:gravity="center"
+        android:autoSizeTextType="uniform"
         android:layout_marginBottom="5sp"
         android:text="course teaher"
         android:textSize="12sp"
-        android:id="@+id/name"
+        android:id="@+id/course_by"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+
+
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/course_code"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/course_price"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/course_video"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/course_no"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/course_des"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/course_requirements"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/course_rate"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <ImageView
-            android:src="@drawable/ic_star_fill_full"
-            android:layout_width="20sp"
-            android:layout_height="20sp"
-            app:tint="@color/star_tint" />
-        <ImageView
-            android:src="@drawable/ic_star_fill_full"
-            android:layout_width="20sp"
-            android:layout_height="20sp"
-            app:tint="@color/star_tint" />
-        <ImageView
-            android:src="@drawable/ic_star_fill_full"
-            android:layout_width="20sp"
-            android:layout_height="20sp"
-            app:tint="@color/star_tint" />
-        <ImageView
-            android:src="@drawable/ic_star_fill_full"
-            android:layout_width="20sp"
-            android:layout_height="20sp"
-            app:tint="@color/star_tint" />
-        <ImageView
-            android:src="@drawable/ic_star_fill_half"
-            android:layout_width="20sp"
-            android:layout_height="20sp"
-            app:tint="@color/star_tint" />
+
+        <RatingBar
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:rating="3.5"/>
     </LinearLayout>
 
 </LinearLayout>

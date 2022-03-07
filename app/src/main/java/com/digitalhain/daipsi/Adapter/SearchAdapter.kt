@@ -9,10 +9,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhain.daipsi.Activity.AnswerView
+import com.digitalhain.daipsi.Fragment.SearchFrag
 import com.digitalhain.daipsi.R
 import com.digitalhain.daipsi.model.Subject
 
-class SearchAdapter(val context: Context, var itemList:ArrayList<Subject>) : RecyclerView.Adapter<SearchAdapter.MainViewHolder>(){
+class SearchAdapter(val context: Context) : RecyclerView.Adapter<SearchAdapter.MainViewHolder>(){
+    private var itemList:ArrayList<Subject> = arrayListOf<Subject>()
     class MainViewHolder(view: View): RecyclerView.ViewHolder(view){
         val question: TextView =view.findViewById(R.id.question)
         val answer: TextView =view.findViewById(R.id.answer)
@@ -21,14 +23,16 @@ class SearchAdapter(val context: Context, var itemList:ArrayList<Subject>) : Rec
     }
 
     fun filterList(filterlist:ArrayList<Subject>){
-        itemList=filterlist
+        itemList.clear()
+        itemList.addAll(filterlist)
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchAdapter.MainViewHolder {
         val view= LayoutInflater.from(parent.context).inflate(R.layout.item_res_search,parent,false)
 
-        return MainViewHolder(view)
+        return SearchAdapter.MainViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
@@ -37,10 +41,11 @@ class SearchAdapter(val context: Context, var itemList:ArrayList<Subject>) : Rec
         holder.answer.text=item.ans
 
         holder.parent.setOnClickListener{
-//            val intent = Intent(context, AnswerView::class.java)
-//            intent.putExtra("Ques",item.ques)
-//            intent.putExtra("Ans",item.ans)
-//            context.startActivity(intent)
+            val intent = Intent(context,AnswerView::class.java)
+            intent.putExtra("course","")
+            intent.putExtra("Ques",item.ques)
+            intent.putExtra("Ans",item.ans)
+            context.startActivity(intent)
         }
     }
     override fun getItemCount(): Int {
